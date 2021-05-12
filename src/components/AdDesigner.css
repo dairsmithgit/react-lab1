@@ -1,0 +1,12 @@
+.adBox {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin: 8px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.adFlavor {
+    font-family: 'Caveat', cursive;
+    font-size: 48px;
+}

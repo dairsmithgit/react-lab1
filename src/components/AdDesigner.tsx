@@ -3,6 +3,7 @@ import './AdDesigner.css';
 
 function AdDesigner() {
     const [ adFlavor, setFlavor ] = useState("");
+    let addClass = "";
 
     function changeFlavorCookie() {
         setFlavor("Cookies & Cream");
