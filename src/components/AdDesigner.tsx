@@ -4,6 +4,7 @@ import './AdDesigner.css';
 function AdDesigner() {
     const [ adFlavor, setFlavor ] = useState("Cookies & Cream");
     const [ adTheme, setTheme ] = useState(" lightTheme");
+    const [ fontCount, setFontSize ] = useState(48);
     let addClassCookie = "";
     let addClassVanilla = "";
     let addClassMatcha = "";
@@ -58,6 +59,14 @@ function AdDesigner() {
         setTheme(" darkTheme");
     }
 
+    function countUp() {
+        setFontSize(prev => prev + 1);
+    }
+
+    function countDown() {
+        setFontSize(prev => prev - 1);
+    }
+
     return (
         <div className="AdDesigner">
             <h1>Ad Designer</h1>
@@ -77,9 +86,7 @@ function AdDesigner() {
                 <button className={addClassDark} onClick={changeThemeDark}>Dark</button>
             </p>
             <h2>Font Size</h2>
-            <button>Down</button>
-
-            <button>Up</button>
+            <button onClick={countDown}>Down</button>{fontCount}<button onClick={countUp}>Up</button>
         </div>
     )
 }
