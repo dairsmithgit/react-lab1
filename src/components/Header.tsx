@@ -1,9 +1,19 @@
 import { useState } from 'react';
 import './Header.css';
 
-function Header() {
+interface Props {
+    name: string;
+}
+
+function Header({name}: Props) {
     return (
-        <header className="Header">Ice Cream Wars</header>
+        <div>
+            <header className="Header">
+                <p className="headerTitle">Ice Cream Wars</p>
+                <p className="headerName">Welcome {name}</p>
+            </header>
+
+        </div>
     )
 }
 

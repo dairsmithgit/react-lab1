@@ -7,7 +7,7 @@ import Votes from './components/Votes';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header name={"Felix"}/>
       <AdDesigner />
     </div>
   );

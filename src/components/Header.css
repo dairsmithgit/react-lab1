@@ -4,4 +4,20 @@
     font-family: 'Caveat', cursive;
     color: #0e3c7e;
     box-shadow: 0px 2px 12px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.headerTitle {
+    align-self: flex-start;
+    margin: 4px;
+}
+
+.headerName {
+    font-size: 16px;
+    text-align: right;
+    color: #000;
+    margin: 4px;
+    font-family: sans-serif;
 }
