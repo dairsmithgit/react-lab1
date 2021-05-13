@@ -2,10 +2,12 @@ import { useState } from 'react';
 import './AdDesigner.css';
 
 function AdDesigner() {
-    const [ adFlavor, setFlavor ] = useState("");
+    const [ adFlavor, setFlavor ] = useState("Cookies & Cream");
+    const [ adTheme, setTheme ] = useState(" lightTheme");
     let addClassCookie = "";
     let addClassVanilla = "";
     let addClassMatcha = "";
+    let addTheme = "";
 
     if (adFlavor === "Cookies & Cream") {
         addClassCookie = " buttonDisabled";
@@ -35,10 +37,18 @@ function AdDesigner() {
         setFlavor("Matcha Tea");
     }
 
+    function changeThemeLight() {
+        setTheme(" lightTheme");
+    }
+
+    function changeThemeDark() {
+        setTheme(" darkTheme");
+    }
+
     return (
         <div className="AdDesigner">
             <h1>Ad Designer</h1>
-            <div className="adBox">
+            <div className={"adBox" + adTheme}>
                 <p>Vote For</p>
                 <p className="adFlavor">{adFlavor}</p>
             </div>
@@ -50,8 +60,8 @@ function AdDesigner() {
             </p>
             <h2>Color Theme</h2>
             <p>
-                <button>Light</button>
-                <button>Dark</button>
+                <button onClick={changeThemeLight}>Light</button>
+                <button onClick={changeThemeDark}>Dark</button>
             </p>
             <h2>Font Size</h2>
             <button>Down</button>

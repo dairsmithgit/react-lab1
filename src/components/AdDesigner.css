@@ -4,6 +4,7 @@
     text-align: center;
     margin: 8px;
     box-shadow: 0px 0px 8px black;
+    border: 2px solid black;
 }
 
 .adFlavor {
@@ -36,4 +37,16 @@ button {
     border: none;
     padding: 4px;
     border-radius: 4px;
+}
+
+.lightTheme {
+    background-color: white;
+    color: #000;
+    border: 2px solid #222;
+}
+
+.darkTheme {
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #fff;
 }
