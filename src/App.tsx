@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Header name={"Felix"}/>
       <AdDesigner />
+      <Votes />
     </div>
   );
 }

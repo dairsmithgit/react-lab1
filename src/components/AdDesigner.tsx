@@ -44,16 +44,6 @@ function AdDesigner() {
         addClassDark = " buttonActive";
     }
 
-    function changeFlavorCookie() {
-        setFlavor("Cookies & Cream");
-    }
-    function changeFlavorVanilla() {
-        setFlavor("Vanilla Bean");
-    }
-    function changeFlavorMatcha() {
-        setFlavor("Matcha Tea");
-    }
-
     function changeThemeLight() {
         setTheme(" lightTheme");
     }
@@ -79,9 +69,9 @@ function AdDesigner() {
             </div>
             <h2>What to Support</h2>
             <p>
-                <button className={addClassCookie} onClick={changeFlavorCookie}>Cookies &amp; Cream</button>
-                <button className={addClassVanilla} onClick={changeFlavorVanilla}>Vanilla Bean</button>
-                <button className={addClassMatcha} onClick={changeFlavorMatcha}>Matcha Tea</button>
+                <button className={addClassCookie} onClick={() => setFlavor("Cookies & Cream")}>Cookies &amp; Cream</button>
+                <button className={addClassVanilla} onClick={() => setFlavor("Vanilla Bean")}>Vanilla Bean</button>
+                <button className={addClassMatcha} onClick={() => setFlavor("Matcha Tea")}>Matcha Tea</button>
             </p>
             <h2>Color Theme</h2>
             <p>

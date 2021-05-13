@@ -22,7 +22,7 @@ button {
     border-radius: 4px;
 }
 
-.buttonActive {
+.buttonActive:focus {
     background-color: #1e60a9;
     color: white;
     margin: 4px;
