@@ -10,3 +10,30 @@
     font-family: 'Caveat', cursive;
     font-size: 48px;
 }
+
+button {
+    background-color: #0e3c7e;
+    color: white;
+    margin: 4px;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.buttonActive {
+    background-color: #1e60a9;
+    color: white;
+    margin: 4px;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.buttonDisabled {
+    background-color: gray;
+    color: white;
+    margin: 4px;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+}
