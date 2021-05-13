@@ -7,7 +7,8 @@ function AdDesigner() {
     let addClassCookie = "";
     let addClassVanilla = "";
     let addClassMatcha = "";
-    let addTheme = "";
+    let addClassLight = "";
+    let addClassDark = "";
 
     if (adFlavor === "Cookies & Cream") {
         addClassCookie = " buttonDisabled";
@@ -25,6 +26,18 @@ function AdDesigner() {
         addClassMatcha = " buttonDisabled";
     } else {
         addClassMatcha = " buttonActive";
+    }
+
+    if (adTheme === " lightTheme") {
+        addClassLight = " buttonDisabled";
+    } else {
+        addClassLight = " buttonActive";
+    }
+
+    if (adTheme === " darkTheme") {
+        addClassDark = " buttonDisabled";
+    } else {
+        addClassDark = " buttonActive";
     }
 
     function changeFlavorCookie() {
@@ -60,8 +73,8 @@ function AdDesigner() {
             </p>
             <h2>Color Theme</h2>
             <p>
-                <button onClick={changeThemeLight}>Light</button>
-                <button onClick={changeThemeDark}>Dark</button>
+                <button className={addClassLight} onClick={changeThemeLight}>Light</button>
+                <button className={addClassDark} onClick={changeThemeDark}>Dark</button>
             </p>
             <h2>Font Size</h2>
             <button>Down</button>
