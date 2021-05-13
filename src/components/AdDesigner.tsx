@@ -5,6 +5,9 @@ function AdDesigner() {
     const [ adFlavor, setFlavor ] = useState("Cookies & Cream");
     const [ adTheme, setTheme ] = useState(" lightTheme");
     const [ fontCount, setFontSize ] = useState(48);
+    const adFlavorSize = {
+        fontSize: fontCount + "px"
+    };
     let addClassCookie = "";
     let addClassVanilla = "";
     let addClassMatcha = "";
@@ -72,7 +75,7 @@ function AdDesigner() {
             <h1>Ad Designer</h1>
             <div className={"adBox" + adTheme}>
                 <p>Vote For</p>
-                <p className="adFlavor">{adFlavor}</p>
+                <p className="adFlavor" style={adFlavorSize}>{adFlavor}</p>
             </div>
             <h2>What to Support</h2>
             <p>
