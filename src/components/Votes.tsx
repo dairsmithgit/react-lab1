@@ -9,7 +9,7 @@ function Votes() {
     let cookieVoteNum = cookieVotes;
     let vanillaVoteNum = vanillaVotes;
     let matchaVoteNum = matchaVotes;
-    let totalVotes = 0;
+    let totalVotes = cookieVotes + vanillaVotes + matchaVotes;
 
     function increaseCookieVote() {
         setCookieVotes(prev => prev + 1);
@@ -39,11 +39,11 @@ function Votes() {
                <button onClick={increaseVanillaVote}>Vanilla Bean</button>
                <button onClick={increaseMatchaVote}>Matcha Tea</button>
             </p>
-            <p><h3>Cookies &amp; Cream: </h3>{cookieVoteNum}({calcShareOfVote(cookieVotes)}%)</p>
+            <p><h3>Cookies &amp; Cream: </h3>{cookieVoteNum}({calcShareOfVote(cookieVotes).toFixed(1)}%)</p>
             <div className="CookieVotes">voting bar cookies/cream</div>
-            <p><h3>Vanilla Bean: </h3>{vanillaVoteNum}({calcShareOfVote(vanillaVotes)}%)</p>
+            <p><h3>Vanilla Bean: </h3>{vanillaVoteNum}({calcShareOfVote(vanillaVotes).toFixed(1)}%)</p>
             <div className="VanillaVotes">voting bar vanilla bean</div>
-            <p><h3>Matcha Tea: </h3>{matchaVoteNum}({calcShareOfVote(matchaVotes)}%)</p>
+            <p><h3>Matcha Tea: </h3>{matchaVoteNum}({calcShareOfVote(matchaVotes).toFixed(1)}%)</p>
             <div className="MatchaVotes">voting bar matcha tea</div>
         </div>
     )
