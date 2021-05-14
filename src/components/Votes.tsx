@@ -9,17 +9,25 @@ function Votes() {
     let cookieVoteNum = cookieVotes;
     let vanillaVoteNum = vanillaVotes;
     let matchaVoteNum = matchaVotes;
+    let totalVotes = 0;
 
     function increaseCookieVote() {
         setCookieVotes(prev => prev + 1);
+        totalVotes++;
     }
 
     function increaseVanillaVote() {
         setVanillaVotes(prev => prev + 1);
+        totalVotes++;
     }
 
     function increaseMatchaVote() {
         setMatchaVotes(prev => prev + 1);
+        totalVotes++;
+    }
+
+    function calcShareOfVote(votes: number) {
+        return (votes / totalVotes) * 100;
     }
 
     // buttons need onClick func to increment vote variables
@@ -31,11 +39,11 @@ function Votes() {
                <button onClick={increaseVanillaVote}>Vanilla Bean</button>
                <button onClick={increaseMatchaVote}>Matcha Tea</button>
             </p>
-            <p><h3>Cookies &amp; Cream: </h3>{cookieVoteNum}</p>
+            <p><h3>Cookies &amp; Cream: </h3>{cookieVoteNum}({calcShareOfVote(cookieVotes)}%)</p>
             <div className="CookieVotes">voting bar cookies/cream</div>
-            <p><h3>Vanilla Bean: </h3>{vanillaVoteNum}</p>
+            <p><h3>Vanilla Bean: </h3>{vanillaVoteNum}({calcShareOfVote(vanillaVotes)}%)</p>
             <div className="VanillaVotes">voting bar vanilla bean</div>
-            <p><h3>Matcha Tea: </h3>{matchaVoteNum}</p>
+            <p><h3>Matcha Tea: </h3>{matchaVoteNum}({calcShareOfVote(matchaVotes)}%)</p>
             <div className="MatchaVotes">voting bar matcha tea</div>
         </div>
     )
