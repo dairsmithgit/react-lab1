@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './AdDesigner.css';
+import './Ad.css';
 
 interface Props {
     flavor: string;

@@ -12,13 +12,13 @@ function Votes() {
     let totalVotes = cookieVotes + vanillaVotes + matchaVotes;
 
     const cookieVoteBar = {
-        width: calcShareOfVote(cookieVotes).toFixed(1) + "vw"
+        width: calcShareOfVote(cookieVotes).toFixed(1) + "%"
     };
     const vanillaVoteBar = {
-        width: calcShareOfVote(vanillaVotes).toFixed(1) + "vw"
+        width: calcShareOfVote(vanillaVotes).toFixed(1) + "%"
     };
     const matchaVoteBar = {
-        width: calcShareOfVote(matchaVotes).toFixed(1) + "vw"
+        width: calcShareOfVote(matchaVotes).toFixed(1) + "%"
     };
 
     function increaseCookieVote() {
@@ -37,7 +37,11 @@ function Votes() {
     }
 
     function calcShareOfVote(votes: number) {
-        return (votes / totalVotes) * 100;
+        if (totalVotes) {
+            return (votes / totalVotes) * 100;
+        } else {
+            return 0;
+        }
     }
 
     // buttons need onClick func to increment vote variables
