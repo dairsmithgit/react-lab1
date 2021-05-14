@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.AdDisplay {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin: 8px;
+    box-shadow: 0px 0px 8px black;
+    border: 2px solid black;
+    overflow: auto;
+}
+
+.adFlavorKind {
+    font-family: 'Caveat', cursive;
+}

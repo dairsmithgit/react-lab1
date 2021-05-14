@@ -9,10 +9,25 @@ interface Props {
 
 function AdDisplay({flavor, fontSize, darkTheme }: Props) {
 
-    <div className="AdDisplay">
+    let addClass = "";
+
+    const adFlavorSize = {
+        fontSize: fontSize + "px"
+    };
+
+    if (darkTheme === true) {
+        addClass = " darkTheme";
+    } else {
+        addClass = " lightTheme";
+    }
+
+    return (
+        <div className={"AdDisplay" + addClass}>
         <p>Vote For</p>
-        <p></p>
-    </div>
+        <p className="adFlavorKind" style={adFlavorSize}>{flavor}</p>
+        </div>
+    )
+
 }
 
 export default AdDisplay;
