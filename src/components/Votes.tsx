@@ -10,15 +10,26 @@ function Votes() {
     let vanillaVoteNum = vanillaVotes;
     let matchaVoteNum = matchaVotes;
 
+    function increaseCookieVote() {
+        setCookieVotes(prev => prev + 1);
+    }
+
+    function increaseVanillaVote() {
+        setVanillaVotes(prev => prev + 1);
+    }
+
+    function increaseMatchaVote() {
+        setMatchaVotes(prev => prev + 1);
+    }
 
     // buttons need onClick func to increment vote variables
     return (
         <div className="Votes">
             <h1>Vote Here</h1>
             <p>
-               <button>Cookies &amp; Cream</button>
-               <button>Vanilla Bean</button>
-               <button>Matcha Tea</button>
+               <button onClick={increaseCookieVote}>Cookies &amp; Cream</button>
+               <button onClick={increaseVanillaVote}>Vanilla Bean</button>
+               <button onClick={increaseMatchaVote}>Matcha Tea</button>
             </p>
             <p><h3>Cookies &amp; Cream: </h3>{cookieVoteNum}</p>
             <div className="CookieVotes">voting bar cookies/cream</div>
