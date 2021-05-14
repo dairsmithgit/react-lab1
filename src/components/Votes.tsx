@@ -56,7 +56,7 @@ function Votes() {
             <p><h3>Matcha Tea: </h3>{matchaVoteNum}({calcShareOfVote(matchaVotes).toFixed(1)}%)</p>
             <div className="MatchaVotes" style={matchaVoteBar}>voting bar matcha tea</div>
         </div>
-    )
+        )
 }
 
 
