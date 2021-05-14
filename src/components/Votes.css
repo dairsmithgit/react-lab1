@@ -18,3 +18,8 @@
     height: 30px;
     margin: 4px;
 }
+
+.voteLabelData {
+    display: flex;
+    align-items: center;
+}

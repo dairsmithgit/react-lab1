@@ -53,11 +53,11 @@ function Votes() {
                <button onClick={increaseVanillaVote}>Vanilla Bean</button>
                <button onClick={increaseMatchaVote}>Matcha Tea</button>
             </p>
-            <p><h3>Cookies &amp; Cream: </h3>{cookieVoteNum}({calcShareOfVote(cookieVotes).toFixed(1)}%)</p>
+            <p className="voteLabelData"><h3>Cookies &amp; Cream: </h3>&nbsp;&nbsp;&nbsp;{cookieVoteNum}({calcShareOfVote(cookieVotes).toFixed(1)}%)</p>
             <div className="CookieVotes" style={cookieVoteBar}></div>
-            <p><h3>Vanilla Bean: </h3>{vanillaVoteNum}({calcShareOfVote(vanillaVotes).toFixed(1)}%)</p>
+            <p className="voteLabelData"><h3>Vanilla Bean: </h3>&nbsp;&nbsp;&nbsp;{vanillaVoteNum}({calcShareOfVote(vanillaVotes).toFixed(1)}%)</p>
             <div className="VanillaVotes" style={vanillaVoteBar}></div>
-            <p><h3>Matcha Tea: </h3>{matchaVoteNum}({calcShareOfVote(matchaVotes).toFixed(1)}%)</p>
+            <p className="voteLabelData"><h3>Matcha Tea: </h3>&nbsp;&nbsp;&nbsp;{matchaVoteNum}({calcShareOfVote(matchaVotes).toFixed(1)}%)</p>
             <div className="MatchaVotes" style={matchaVoteBar}></div>
         </div>
         )
